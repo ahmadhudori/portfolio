@@ -29,3 +29,41 @@ section {
 .home .my-arrow img {
     width: 65px;
 }
+
+@keyframes upDown {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.my-arrow img {
+    animation: 1s upDown infinite;
+}
+
+@keyframes flash {
+    0% {
+        opacity: 1;
+    }
+    25% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 0;
+    }
+    75% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.my-arrow .more-info {
+    animation: 2s flash infinite;
+}
