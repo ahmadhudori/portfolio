@@ -1,3 +1,7 @@
+body {
+    height: 4000px;
+}
+
 section {
     padding-top: 128px;
     position: relative;
@@ -11,7 +15,7 @@ section::before {
     font-weight: 700;
     opacity: 0.25;
     position: absolute;
-    top: 0;
+    top: 50px;
     left: -30px;
 }
 
@@ -81,8 +85,9 @@ section::before {
     animation: 2s flash infinite;
 }
 
-.about {
+.about, .work {
     margin-top: 40px;
+    padding-top: 200px;
 }
 
 .about::before {
@@ -103,6 +108,65 @@ section::before {
     display: none;
 }
 
+.work::before {
+    content: 'Work';
+}
+
+.work .image {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "work1 work2" "work3 work3";
+    gap: 16px;
+}
+
+
+#work1 {
+    grid-area: work1;
+}
+
+#work2 {
+    grid-area: work2;
+}
+#work3 {
+    grid-area: work3;
+}
+
+.work .image img {
+    width: 100%;
+}
+
+.work .image .image-item {
+    position: relative;
+}
+
+.work .image .image-item:hover::after {
+    content: '';
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width: 100%;
+    color: white;
+    font-size: 24px;
+    font-weight: 500;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#work1:hover::after {
+    content: 'Web Project';
+}
+
+#work2:hover::after {
+    content: 'Web Project';
+}
+
+#work3:hover::after {
+    content: 'Web Project';
+}
+
 /* laptop */
 @media (max-width: 992px) {
     .html {
@@ -117,5 +181,34 @@ section::before {
 
 /* handphone */
 @media (max-width: 576px) {
+    .home .row {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 20px;
+        align-items: auto;
+        transform: translateX(0);
+        width: 100%;
+        /* position: relative; */
+        justify-content: center;
+        align-items: end;
+        
+    }
+    .home .row .potrait {
+        width: 20%;
+        position: relative;
+        right: 115px;
+    }
 
+    .home .row .potrait img {
+        width: 500%;
+    }
+
+    section::before {
+        left: 15px;
+    }
+
+    .work .row {
+        display: flex;
+        flex-direction: column;
+    }
 }
