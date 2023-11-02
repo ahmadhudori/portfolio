@@ -85,7 +85,7 @@ section::before {
     animation: 2s flash infinite;
 }
 
-.about, .work {
+.about, .work, .contact {
     margin-top: 40px;
     padding-top: 200px;
 }
@@ -167,6 +167,15 @@ section::before {
     content: 'Web Project';
 }
 
+.contact::before {
+    content: 'Contact';
+}
+
+.contact .contact-form {
+    border: 1px solid black;
+    padding: 40px 30px;
+}
+
 /* laptop */
 @media (max-width: 992px) {
     .html {
@@ -185,18 +194,30 @@ section::before {
         display: flex;
         flex-direction: column-reverse;
         gap: 20px;
-        align-items: auto;
-        transform: translateX(0);
+        align-items: center !important;
+        transform-origin: center !important;
         width: 100%;
-        /* position: relative; */
-        justify-content: center;
-        align-items: end;
-        
+        justify-content: center !important;
+        text-align: center;
+        text-wrap: nowrap;    
     }
+
+    .home .row .col-4 {
+        width: 100%;
+        display: flex;
+        margin: 0;
+        padding: 0;
+    }
+
     .home .row .potrait {
         width: 20%;
         position: relative;
-        right: 115px;
+        left: 12px;
+        display: flex;
+        justify-content: center;
+        transform-origin: center;
+        align-items: center;
+        line-height: 0;
     }
 
     .home .row .potrait img {
@@ -206,9 +227,31 @@ section::before {
     section::before {
         left: 15px;
     }
+    
+    .home h1 {
+        font-size: 40px;
+    }
 
-    .work .row {
+    .home .row .col-8 {
+        position: relative;
+        left: 13px;
+    }
+
+    .home h3 {
+        font-size: 30px;
+    }
+
+    .contact .row {
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
+        gap: 16px;
+    }
+
+    .contact .row .my-col {
+        position: relative;
+    }
+
+    .social-media p {
+        margin: 0;
     }
 }
