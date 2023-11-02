@@ -49,23 +49,23 @@
     </nav>
 
     <section id="home" class="home container">
-      <div class="row d-flex align-items-center justify-content-center">
-        <div class="col-8">
+      <div class="row flex-column-reverse flex-md-row align-items-center ">
+        <div class="col-12 col-md-8">
           <h3 class="fw-semibold">Hi! I am</h3>
           <h1 class="fw-bold">Ahmad Hudori</h1>
           <p>I am software engineer based in Indonesia</p>
           <a class="btn" href="img/potrait.png" download>Resume</a>
         </div>
-        <div class="col-4 potrait">
+        <div class="col-12 col-md-4 d-flex justify-content-md-end justify-content-center">
           <img src="img/potrait.png" alt="Potrait" />
         </div>
       </div>
-      <div class="my-arrow d-flex align-items-center flex-column mt-5">
-        <a href="#about" class="more-info text-decoration-none text-dark"
-          >More info</a
+      <a class="my-arrow text-decoration-none d-flex align-items-center flex-column mt-5" href="#about">
+        <div class="more-info text-dark"
+          >More info</div
         >
         <img href="#about" class="mt-2" src="img/arrow.svg" alt="arrow" />
-      </div>
+      </a>
     </section>
 
     <section id="about" class="about container">
@@ -134,12 +134,12 @@
 
     <section id="work" class="work container ">
       <div class="row d-flex align-items-center gap-5">
-        <div class="col">
+        <div class="col-12 col-md-5">
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. In, mollitia sed. Placeat voluptatem mollitia odio, itaque, nemo quidem natus temporibus, optio inventore quae facilis assumenda fugiat dolorem. A quasi corporis, veniam dolorum adipisci, consequatur hic totam magnam minus aliquid aliquam harum voluptatem nemo cumque tempore? Delectus cum vitae beatae a!
           </p>
         </div>
-        <div class="col image">
+        <div class="col-12 col-md-6 image">
           <div class="image-item" id="work1">
             <img src="img/work-1.png" alt="work-1" >
           </div>
@@ -155,24 +155,24 @@
 
     <section id="contact" class="contact container">
       <div class="row d-flex align-items-center">
-        <div class="col my-col">
+        <div class="col-12 col-lg-7 my-col">
           <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure, dignissimos.</p>
-          <div class="row social-media gap-1">
-            <div class="col d-flex align-items-center gap-2">
-              <a href="https://web.facebook.com/profile.php?id=100008457004903" target="_blank"><i class="bi bi-facebook fs-1"></i></a>
-              <p>DOrri</p>
+          <div class="row social-media m-3 gap-1">
+            <div class="col d-flex align-items-center gap-1">
+              <a href="https://web.facebook.com/profile.php?id=100008457004903" target="_blank"><i class="w-25 bi bi-facebook fs-1"></i></a>
+              <p class="mb-0 ms-2">DOrri</p>
             </div>
             <div class="col d-flex align-items-center gap-2">
-              <a href="https://web.facebook.com/profile.php?id=100008457004903" target="_blank"><i class="bi bi-instagram fs-1"></i></a>
-              <p>@ahmadhudori06</p>
+              <a href="https://web.facebook.com/profile.php?id=100008457004903" target="_blank"><i class="w-25 bi bi-instagram fs-1"></i></a>
+              <p class="mb-0 ms-2">@ahmadhudori06</p>
             </div>
             <div class="col d-flex align-items-center gap-2">
-              <a href="082114907891" target="_blank"><i class="bi bi-whatsapp fs-1"></i></a>
-              <p>0821-1490-7891</p>
+              <a href="082114907891" target="_blank"><i class="w-25 bi bi-whatsapp fs-1"></i></a>
+              <p class="mb-0 ms-2">0821-1490-7891</p>
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col-12 col-lg-5 ">
           <form class="contact-form rounded-1" onsubmit="onFormSubmit(event)">
             <div class="mb-3">
               <label for="email" class="form-label fw-bold">Email address</label>
